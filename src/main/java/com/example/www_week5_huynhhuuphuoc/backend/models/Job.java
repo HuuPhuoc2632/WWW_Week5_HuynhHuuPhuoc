@@ -1,4 +1,4 @@
-package com.example.www_week5_huynhhuuphuoc.models;
+package com.example.www_week5_huynhhuuphuoc.backend.models;
 
 import jakarta.persistence.*;
 import lombok.*;

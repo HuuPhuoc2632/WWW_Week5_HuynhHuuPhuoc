@@ -1,7 +1,7 @@
-package com.example.www_week5_huynhhuuphuoc.models;
+package com.example.www_week5_huynhhuuphuoc.backend.models;
 
-import com.example.www_week5_huynhhuuphuoc.enums.SkillLevel;
-import com.example.www_week5_huynhhuuphuoc.id.CandidateSkillID;
+import com.example.www_week5_huynhhuuphuoc.backend.enums.SkillLevel;
+import com.example.www_week5_huynhhuuphuoc.backend.id.CandidateSkillID;
 import jakarta.persistence.*;
 import lombok.*;
 

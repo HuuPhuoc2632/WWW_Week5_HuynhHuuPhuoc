@@ -1,4 +1,4 @@
-package com.example.www_week5_huynhhuuphuoc.enums;
+package com.example.www_week5_huynhhuuphuoc.backend.enums;
 
 public enum SkillType {
     UNSPECIFIC(0),

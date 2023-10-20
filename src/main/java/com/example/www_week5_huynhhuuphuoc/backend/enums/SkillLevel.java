@@ -1,4 +1,4 @@
-package com.example.www_week5_huynhhuuphuoc.enums;
+package com.example.www_week5_huynhhuuphuoc.backend.enums;
 
 public enum SkillLevel {
     MASTER(5),

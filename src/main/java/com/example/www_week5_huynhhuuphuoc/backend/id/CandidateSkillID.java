@@ -1,4 +1,4 @@
-package com.example.www_week5_huynhhuuphuoc.id;
+package com.example.www_week5_huynhhuuphuoc.backend.id;
 
 import java.io.Serializable;
 import java.util.Objects;

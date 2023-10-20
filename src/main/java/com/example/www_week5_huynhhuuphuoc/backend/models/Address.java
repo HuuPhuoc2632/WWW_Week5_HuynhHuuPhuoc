@@ -1,6 +1,6 @@
-package com.example.www_week5_huynhhuuphuoc.models;
+package com.example.www_week5_huynhhuuphuoc.backend.models;
 
-import com.example.www_week5_huynhhuuphuoc.enums.Country;
+import com.example.www_week5_huynhhuuphuoc.backend.enums.Country;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,7 +17,7 @@ public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(length = 20)
-    private long id;
+    private long add_id;
     @Column(length = 150)
     private String street;
     @Column(length = 50)

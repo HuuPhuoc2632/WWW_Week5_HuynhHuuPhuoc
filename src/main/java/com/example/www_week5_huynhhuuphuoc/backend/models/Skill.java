@@ -1,6 +1,6 @@
-package com.example.www_week5_huynhhuuphuoc.models;
+package com.example.www_week5_huynhhuuphuoc.backend.models;
 
-import com.example.www_week5_huynhhuuphuoc.enums.SkillType;
+import com.example.www_week5_huynhhuuphuoc.backend.enums.SkillType;
 import jakarta.persistence.*;
 import lombok.*;
 @Table(name = "experience")

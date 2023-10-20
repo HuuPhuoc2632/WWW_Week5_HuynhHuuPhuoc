@@ -1,12 +1,10 @@
-package com.example.www_week5_huynhhuuphuoc.models;
+package com.example.www_week5_huynhhuuphuoc.backend.models;
 
 
-import com.example.www_week5_huynhhuuphuoc.enums.SkillLevel;
-import com.example.www_week5_huynhhuuphuoc.id.JobSkillID;
+import com.example.www_week5_huynhhuuphuoc.backend.id.JobSkillID;
+import com.example.www_week5_huynhhuuphuoc.backend.enums.SkillLevel;
 import jakarta.persistence.*;
 import lombok.*;
-
-import java.util.List;
 
 @Table(name = "job_skill")
 @Getter
