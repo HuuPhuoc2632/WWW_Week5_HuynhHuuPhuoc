@@ -1,5 +1,13 @@
 # WWW_Week5_HuynhHuuPhuoc  
 SOURCE CODE IN MASTER BRANCH  
+## Mô tả:
+Thiết kế một api tuyển dụng  
+Gồm các entity: company, address, job, skill, candidate,  
+job_skill, candidate_skill, experience  
+## Chức năng:
+Hiển thị danh sách ứng viên theo từng trang với mỗi trang có 10 ứng viên  
+Chức năng apply vào 1 tin tuyển dụng
+
 ## Entity Diagrams  
 ![image](https://github.com/HuuPhuoc2632/WWW_Week5_HuynhHuuPhuoc/assets/125341224/3665deaa-b0f3-4706-a831-d48dd5e91fea)  
 ## Get list candidates
