@@ -17,7 +17,28 @@ C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-<div th:switch="${candidates}" >
+<style>
+    div.inline {
+        display: inline-block;
+        align-items: center;
+        float: left;
+        text-decoration: none;
+        padding: 5px 5px;
+    }
+</style>
+<ul class="navbar">
+    <li class="navitem"><a th:href="@{/}">Trang chủ</a></li>
+    <li class="navitem" id="jobpostingsDropdown" onmouseenter="showDropdown()" onmouseleave="hideDropdown()">
+        <a href="javascript:void(0);" class="dropbtn">Tin tuyển dụng</a>
+        <div class="dropdown-content jobpostings-content" id="jobpostingsContent">
+            <a th:href="@{/view}">Xem tin tuyển dụng</a>
+            <a th:href="@{/cj}">Đăng tin tuyển dụng</a>
+        </div>
+    </li>
+    <li class="navitem"><a th:href="@{/candidates}">Ứng viên</a></li>
+    <li class="navitem"><a th:href="@{/apply}">Ứng tuyển công việc</a></li>
+</ul>
+<div th:switch="${candidatePage}" >
     <h2 th:case="null">No candidates yet!</h2>
     <div th:case="*">
         <h2>Candidates</h2>
@@ -35,7 +56,7 @@ C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             </tr>
             </thead>
             <tbody>
-            <tr th:each="candidate : ${candidates}">
+            <tr th:each="candidate : ${candidatePage}">
                 <td th:text="${candidate.id}"></td>
                 <td th:text="${candidate.fullName}"></td>
                 <td th:text="${candidate.dob}"></td>
@@ -47,6 +68,12 @@ C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
             </tr>
             </tbody>
         </table>
+        <div class="inline" th:if="${candidatePage.totalPages>0}" th:each="pageNumber : ${pageNumbers}">
+            <a th:href="@{/candidates(size=${candidatePage.size}, page=${pageNumber})}"
+               th:text="${pageNumber}"
+               th:class="${pageNumber == candidatePage.number +1} ? active"></a>
+
+        </div>
     </div>
 </div>
 </body>

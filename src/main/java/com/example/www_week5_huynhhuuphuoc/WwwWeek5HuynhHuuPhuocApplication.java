@@ -24,7 +24,7 @@ public class WwwWeek5HuynhHuuPhuocApplication {
 	private CandidateRepository candidateRepository;
 	@Autowired
 	private AddressRepository addressRepository;
-	@Bean
+//	@Bean
 	CommandLineRunner initData(){
 		return args -> {
 			Random rnd =new Random();

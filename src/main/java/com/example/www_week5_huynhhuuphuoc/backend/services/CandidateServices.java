@@ -23,15 +23,22 @@ public class CandidateServices {
         int startItem = currentPage * pageSize;
         List<Candidate> list;
         List<Candidate> candidates = candidateRepository.findAll();
+
         if (candidates.size() < startItem) {
             list = Collections.emptyList();
         } else {
+
             int toIndex = Math.min(startItem + pageSize, candidates.size());
             list = candidates.subList(startItem, toIndex);
         }
-        Page<Candidate> candidatePage
-                = new PageImpl<>(list, PageRequest.of(currentPage, pageSize),
-                candidates.size());
-        return candidatePage;
+        Page<Candidate> candidatesPage = new PageImpl<>(list, PageRequest.of(currentPage, pageSize), candidates.size());
+        return candidatesPage;
+    }
+    public List<Candidate> findAll(){
+        return candidateRepository.findAll();
+    }
+    //add new candidate
+    public Candidate save(Candidate candidate){
+        return candidateRepository.save(candidate);
     }
 }
